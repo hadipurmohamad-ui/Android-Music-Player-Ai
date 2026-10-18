@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "Music Player"
+description = "A native Android music player for browsing music stored on the device, playing tracks, and managing a personal listening queue."
+version = "1.0.0"
+id = "artifacts/music-player"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 21134
+
+[services.development]
+run = "pnpm --filter @workspace/music-player run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/music-player", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/music-player", "run", "serve" ]
+
+[services.env]
+PORT = "21134"
+BASE_PATH = "/"
