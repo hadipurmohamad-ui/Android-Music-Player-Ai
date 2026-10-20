@@ -7,6 +7,9 @@
     "icon": "./assets/images/icon.png",
     "scheme": "music-player",
     "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0A0B1A"
+    },
     "ios": {
       "supportsTablet": false
     },
